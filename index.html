@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bento-ux-ui</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #000000;
+      --transition-speed: 0.3s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0a;
+        --fg: #f2f2f2;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
+    }
+
+    .card {
+      border: 1px solid var(--fg);
+      padding: 2rem;
+      max-width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--fg);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:hover {
+      color: gray;
+      border-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>bento-ux-ui</h1>
+    <p>Freelance UI/UX & design minimaliste</p>
+    <p><a href="mailto:bento@exemple.com">bento@exemple.com</a></p>
+  </div>
+</body>
+</html>
